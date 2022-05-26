@@ -27,7 +27,7 @@ public class Aluno {
         return calculaMedia();
     }
 
-    String passou(){
+     public boolean passou(){
         if(getMedia() >= 7){
             return "Passou";
         } else {
