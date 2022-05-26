@@ -33,7 +33,7 @@ public class Disciplina {
         return media;
     }
 
-    void imprimeSucEAnt(int posicao) {
+    public void imprimeAlunosPróximos(int posicao) {
         if (posicao >= 1 && posicao <= 8) {
             System.out.print("Nome do aluno na posição " + (posicao - 1) + ", anterior ao aluno "
                     + alunos[posicao].getNome() + ": " + alunos[posicao - 1].getNome() + "\n");
