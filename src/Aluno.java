@@ -13,14 +13,7 @@ public class Aluno {
     void imprimeId(int id){
         System.out.println(id);
     }
-    
-    void alteraNome(String nome){
-        setNome(nome);
-    }
-    
-    void alteraId(int id){
-        setId(id);
-    }
+  
     
     //Calcula a média e retorna o resultado
     private double calculaMedia(){
@@ -30,7 +23,7 @@ public class Aluno {
     }
     
     //Retorna a média das notas
-    double retornaMedia(){
+    public double retornaMedia(){
         return calculaMedia();
     }
 
