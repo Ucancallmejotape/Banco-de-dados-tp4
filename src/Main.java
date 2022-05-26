@@ -13,9 +13,9 @@ public class Main {
         aluno1.nota2 = 6.5;
 
         //Questão 2 - Item B
-        aluno1.alteraNome("Antonio");
+        aluno1.setNome("João");
         //Questão 2 - Item C
-        aluno1.alteraId(4202469);
+        aluno1.setId(1);
 
         //Questão 2 - Item E
         System.out.println("Resposta da questão 2 - item E:");
