@@ -1,13 +1,20 @@
 public class Disciplina {
     Aluno alunos[] = new Aluno[10];
-    int count = 0;
 
     // Adiciona aluno no array alunos
-    void addAlunos(Aluno aluno) {
-        if (count < 10) {
-            alunos[count] = aluno;
+    void adicionaAluno(Aluno aluno, int pos) {
+        if (pos >= 0 && pos <= 10) {
+            alunos[pos] = aluno;
+        } else {
+            System.out.print("Adicione o aluno em uma posição válida do array");
+        }
+    }
 
-            this.count++;
+    void removeAluno(int idAluno) {
+        for (int i = 0; i < 10; i++) {
+            if(alunos[i].getId() == idAluno){
+                alunos[i] = null;
+            }
         }
     }
 
@@ -15,7 +22,9 @@ public class Disciplina {
         double somaDasNotas = 0;
         double media;
         for (int i = 0; i < 10; i++) {
-            somaDasNotas += alunos[i].nota1;
+            if(alunos[i] != null){
+                somaDasNotas += alunos[i].nota1;
+            }
         }
 
         media = somaDasNotas / 10;
@@ -26,7 +35,9 @@ public class Disciplina {
         double somaDasNotas = 0;
         double media;
         for (int i = 0; i < 10; i++) {
-            somaDasNotas += alunos[i].nota2;
+            if(alunos[i] != null){
+                somaDasNotas += alunos[i].nota2;
+            }
         }
 
         media = somaDasNotas / 10;
@@ -62,16 +73,16 @@ public class Disciplina {
 
         // Adicionando os alunos no array alunos
         // de Disciplina
-        d1.addAlunos(a0);
-        d1.addAlunos(a1);
-        d1.addAlunos(a2);
-        d1.addAlunos(a3);
-        d1.addAlunos(a4);
-        d1.addAlunos(a5);
-        d1.addAlunos(a6);
-        d1.addAlunos(a7);
-        d1.addAlunos(a8);
-        d1.addAlunos(a9);
+        d1.adicionaAluno(a0, 0);
+        d1.adicionaAluno(a1, 1);
+        d1.adicionaAluno(a2, 2);
+        d1.adicionaAluno(a3, 3);
+        d1.adicionaAluno(a4, 4);
+        d1.adicionaAluno(a5, 5);
+        d1.adicionaAluno(a6, 6);
+        d1.adicionaAluno(a7, 7);
+        d1.adicionaAluno(a8, 8);
+        d1.adicionaAluno(a9, 9);
 
         // Povoando as notas
         a0.nota1 = 1;
