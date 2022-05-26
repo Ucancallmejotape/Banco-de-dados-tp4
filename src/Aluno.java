@@ -5,6 +5,17 @@ public class Aluno {
     
     protected double nota1;
     protected double nota2;
+
+    public Aluno(){
+
+    }
+
+    public Aluno(String nome, int id, double nota1, double nota2) {
+        setNome(nome);
+        setId(id);
+        this.nota1 = nota1;
+        this.nota2 = nota2;
+    }
     
     void imprimeNome(String nome){
         System.out.println(nome);
@@ -14,7 +25,6 @@ public class Aluno {
         System.out.println(id);
     }
   
-    
     //Calcula a média e retorna o resultado
     private double calculaMedia(){
         this.setMedia((this.nota1 + this.nota2) / 2); 
@@ -27,11 +37,11 @@ public class Aluno {
         return calculaMedia();
     }
 
-     public boolean passou(){
+    boolean passou(){
         if(getMedia() >= 7){
-            return "Passou";
+            return true;
         } else {
-            return "Não passou";
+            return false;
         }
     }
 
