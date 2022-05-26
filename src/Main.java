@@ -23,58 +23,43 @@ public class Main {
 
         //Questão 2 - Item F
         System.out.println("Resposta da questão 2 - item F:");
-        System.out.println(aluno1.passou());
+        if(aluno1.passou() == true){
+            System.out.println("Passou");
+        } else {
+            System.out.println("Não passou");
+        }
 
 /////////////////////////////////////////////////////// -----QUESTÃO 4----- /////////////////////////////////////////////////////// 
         
         //Questão 4 - Instanciando um objeto Disciplina
-        Disciplina d1 = new Disciplina();
+        Disciplina turmaCK0084 = new Disciplina();
 
         //Questão 4 - Instanciando os alunos
-        Aluno a0 = new Aluno();
-        Aluno a1 = new Aluno();
-        Aluno a2 = new Aluno();
-        Aluno a3 = new Aluno();
-        Aluno a4 = new Aluno();
-        Aluno a5 = new Aluno();
-        Aluno a6 = new Aluno();
-        Aluno a7 = new Aluno();
-        Aluno a8 = new Aluno();
-        Aluno a9 = new Aluno();
+        Aluno aluno2 = new Aluno("João", 2, 5.0, 10.0);
+        Aluno aluno3 = new Aluno("Ana", 3, 6.0, 8.5);
 
         //Questão 4 - Adicionando os alunos no array alunos
         //de Disciplina
-        d1.addAlunos(a0);
-        d1.addAlunos(a1);
-        d1.addAlunos(a2);
-        d1.addAlunos(a3);
-        d1.addAlunos(a4);
-        d1.addAlunos(a5);
-        d1.addAlunos(a6);
-        d1.addAlunos(a7);
-        d1.addAlunos(a8);
-        d1.addAlunos(a9);
-        
-        //Questão 4 - Povoando os nomes
-        a0.setNome("Hanna");
-        a1.setNome("Marcos");
-        a2.setNome("Antonio");
-        a3.setNome("Gabriela");
-        a4.setNome("Kaio");
-        a5.setNome("Eduarda");
-        a6.setNome("Felipe");
-        a7.setNome("Thiago");
-        a8.setNome("Julia");
-        a9.setNome("Davi");
+        turmaCK0084.adicionaAluno(aluno1, 0);
+        turmaCK0084.adicionaAluno(aluno2, 1);
+        turmaCK0084.adicionaAluno(aluno3, 2);
+
+        System.out.println("Média da nota 1 da turma: " + turmaCK0084.mediaNota1());
+
+        turmaCK0084.removeAluno(1);
+
+        System.out.println("Média da nota 2 da turma: " + turmaCK0084.mediaNota2());
+
+        turmaCK0084.adicionaAluno(aluno1, 0);
 
         System.out.println("\n");
         System.out.println("Resposta da questão 4:");
         //Questão 4 - Invocando a função que imprime
         //os nomes dos alunos da posição anterior e
         //da posição seguinte
-        d1.imprimeAlunosPróximos(0);
-        d1.imprimeAlunosPróximos(1);
-        d1.imprimeAlunosPróximos(2);
+        turmaCK0084.imprimeAlunosPróximos(0);
+        turmaCK0084.imprimeAlunosPróximos(1);
+        turmaCK0084.imprimeAlunosPróximos(2);
         
     }
 }
