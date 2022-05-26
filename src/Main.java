@@ -72,6 +72,9 @@ public class Main {
         //Questão 4 - Invocando a função que imprime
         //os nomes dos alunos da posição anterior e
         //da posição seguinte
-        d1.imprimeSucEAnt(4);
+        d1.imprimeAlunosPróximos(0);
+        d1.imprimeAlunosPróximos(1);
+        d1.imprimeAlunosPróximos(2);
+        
     }
 }
