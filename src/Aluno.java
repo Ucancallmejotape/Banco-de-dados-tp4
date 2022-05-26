@@ -29,9 +29,9 @@ public class Aluno {
 
     boolean passou(){
         if(getMedia() >= 7){
-            return true;
+            return "Passou";
         } else {
-            return false;
+            return "Não passou";
         }
     }
 
